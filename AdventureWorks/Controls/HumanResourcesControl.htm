@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="HumanResourcesEmployee">
+        <div class="GridBorder">
+            <div class="PanelZoneTitle">
+                <div class="FloatLeft" style="font-size: 1.3em;font-weight: bold;width: 200px;">
+                    Employees
+                </div>
+                <div class="FloatLeft">
+                    <div style="display:inline;vertical-align: middle;">
+                        <img src="../Applications/AdventureWorks/Images/filter16.png" title="Filtrer sur le nom" /> 
+                    </div>
+                    <input name="TxtUserFilter" type="text" class="FilterControl" style="width: 200px;" />                    
+                </div>
+                <div class="FloatRight">
+                    Nombre de résultats par page :<select name="SelectPageSize"></select>
+                </div>
+                <div class="FloatClear"></div>
+            </div>
+            <input name="Button1" type="button" value="Button1" />
+            <div aas-name="GridEmployees" aas-type="AspectizeGrid"></div>
+        </div>
+    </div>
+
+    <div aas:control="HumanResourcesStat">
+        <div class="FondGraphe">
+            <div aas-name="MaritalStatusChart" aas-type="Dhtmlx.DhtmlxStackedBarChart"></div>
+        </div>
+    </div>
+
+</body>
+</html>

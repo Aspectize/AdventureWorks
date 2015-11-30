@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="ProductLayout">
+        <div aas-name="ZoneArbre" aas-type="Panel"></div>
+        <div aas-name="ZoneElement" aas-type="Panel"></div>
+        <div class="FloatClear"></div>
+   </div>
+   
+   <div aas:control="ADWMain">
+       <div aas-name="ZoneToolBar" aas-type="Panel"></div>
+       <div aas-name="ZoneTree" aas-type="Panel"></div>
+       <div aas-name="ZoneProduct" aas-type="Panel"></div>
+    </div>
+
+   <div aas:control="ADWTree">
+       <div aas-name="ProductCategoryTree" aas-type="AspectizeTreeView"></div>
+</div>
+    
+    <div aas:control="ProductArbre">
+        <div aas-name="CategoryTree" aas-type="AspectizeTreeView"></div>
+    </div>
+
+    <div aas:control="ProductDetail">
+        <div class="PaddingSmall">
+            <div class="MenuToolbar">
+                <a aas-name="BtnEdit" class="ImageButton Read Edit16">Editer</a>
+                <a aas-name="BtnCancel" class="ImageButton Edit Cancel16">Annuler</a>
+                <a aas-name="BtnSave" class="ImageButton Edit Save16">Sauver</a>
+            </div>
+        
+            <div aas-name="DynamicControlName" aas-type="AspectizeDynamicControl"></div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;padding-bottom: 2px;">
+                <label class="aasLabelZone">ProductNumber:</label>
+                    <div class="aasValueZone">
+                        <div class="Edit" style="padding-top: 2px;">
+                            <input aas-name="TxtProductNumber" class="aasValueZone" type="text" aas:properties="ErrorDisplay:'ErrorDisplayProductNumber'" />
+                            <div aas-name="ErrorDisplayProductNumber" aas-type="ErrorDisplay" class="ErrorDisplay NoError InLineOnError"></div>
+                        </div>
+                        <div class="Read">
+                            <span style="padding: 5px 0px 0px 4px;">{ProductNumber}</span>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone "></div>
+                </div>
+            </div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;padding-bottom: 2px;">
+                <label class="aasLabelZone">Category:</label>
+                    <div class="aasValueZone">
+                        <div class="Edit" style="padding-top: 2px;">
+                            <select aas-name="Category"></select>
+                        </div>
+                        <div class="Read">
+                            <span>{ProductCategory}</span>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone "></div>
+                </div>
+            </div>
+
+            <div aas-name="DynamicControlSafetyStockLevel" aas-type="AspectizeDynamicControl"></div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;padding-bottom: 2px;">
+                <label class="aasLabelZone">Size :</label>
+                    <div class="aasValueZone">
+                        <div class="Edit" style="padding-top: 2px;">
+                            <input name="TxtSize" type="text" style="width: 50px;"/> 
+                            <select name="SelectUnit" aas:properties="NullValueDisplay:'None'" class="aasValueZone" style="width: 98px;"></select>
+                        </div>
+                        <div class="Read">
+                            <span style="padding:2px 0 0 1px">{Size}</span>&nbsp;<span style="padding:1px 0 0 1px">{SizeUnit}</span>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone"></div>                   
+                </div>
+            </div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;">
+                    <label class="aasLabelZone">SellStartDate :</label>
+                    <div class="aasValueZone">
+                        <div class="Edit">
+                            <input name="TxtSellStartDate" type="text" class="JQueryDatePickerExtend" />
+                        </div>
+                        <div class="Read">
+                            <span style="padding-top: 4px; padding-left: 5px;">{SellStartDate}</span>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone"></div>
+                </div>
+            </div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;">
+                    <label class="aasLabelZone">SellEndDate :</label>
+                    <div class="aasValueZone">
+                        <div class="Edit">
+                            <input name="TxtSellEndDate" type="text" class="JQueryDatePickerExtend" />
+                        </div>
+                        <div class="Read">
+                            <span style="padding-top: 2px; padding-left: 5px;">{SellEndDate}</span>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone"></div>
+                </div>
+            </div>
+            
+            <div aas-name="DynamicControlMakeFlag" aas-type="AspectizeDynamicControl"></div>
+            <div aas-name="DynamicControlGender" aas-type="AspectizeDynamicControl"></div>
+
+            <div class="AspectizeDynamicControl">
+                <div class="aasDynamicControl" style="padding-top: 2px;padding-bottom: 2px;">
+                <label class="aasLabelZone">Photo:</label>
+                    <div class="aasValueZone">
+                        <div class="Edit" style="padding-top: 2px;">
+                            <select aas-name="ProductImageEdit"></select>
+                        </div>
+                        <div class="Read">
+                            <div aas-name="ProductImage" aas-type="AspectizeImage" style="padding-top: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="aasFooterZone "></div>
+                </div>
+            </div>
+
+        </div>
+     </div>
+
+</body>
+</html>

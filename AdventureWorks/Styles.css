@@ -1,0 +1,335 @@
+﻿body {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.aasDynamicControl > div.aasValueZone.false
+{
+    background: none;
+}
+
+.ZoneBandeauHaut {
+    background-repeat: no-repeat;
+    height: 120px;
+}
+
+.Main {
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.ZoneContent {
+    padding-top: 12px;
+}
+
+#MainControl-MainMenu {
+    background-color: #0E4B6D;
+    height: 32px;
+    padding: 3px;
+}
+
+.aasDropDownMenu > ul > li.MenuRight
+{
+    float:right;
+}
+
+.aasDropDownMenu {
+    background-color:  #0E4B6D;
+}
+
+.aasDropDownMenu li {
+    background-color: Transparent;
+    color: white;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.aasDropDownMenu li.aasOver,
+.aasDropDownMenu li .selected 
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: medium none;
+    border-color: #C7C6C6 #C7C6C6 -moz-use-text-color;
+    color: #416AA3;
+}
+
+.ZoneArbre
+{
+    float: left;
+    width: 30%;
+}
+
+.ZoneElement
+{
+    float: left;
+    width: 70%;
+}
+
+.PaddingSmall
+{
+     padding: 5px;
+}
+
+.Category.open span.image,
+.Category.closed span.image
+{
+	background:url(Images/Category.png) no-repeat;
+}
+
+.Subcategory.open span.image,
+.Subcategory.closed span.image
+{
+	background:url(Images/SubCategory.png) no-repeat;
+}
+
+.Product.open span.image,
+.Product.closed span.image
+{
+	background:url(Images/Product.png) no-repeat;
+}
+
+.MenuToolbar {
+    padding-bottom: 4px;
+    line-height: 32px;
+}
+
+a.ImageButton {
+    margin: 2px 10px 0 0;
+    padding: 1px 5px 3px 28px;
+    text-decoration: none;
+}
+
+a.ImageButton:hover
+{
+    background-color: #CCCCCC;
+}
+
+.ImageButton {
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+a.ImageButton.Edit16 {
+    background-image: url("Images/Edit16.png");
+}
+
+a.ImageButton.Save16 {
+    background-image: url("Images/Save16.png");
+}
+
+a.ImageButton.Cancel16 {
+    background-image: url("Images/Cancel16.png");
+}
+
+.true .Read, .false .Edit {
+    display: none;
+}
+
+.false .Read, .true .Edit {
+    display: inline;
+}
+
+/* Tab */
+
+.TabVertical.aasNewTabControl > .pageZone 
+{
+    clear:none;
+    float: left;
+    width: 72%;
+    border-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-style: none;
+    border-width: 0;
+    background-color:transparent;        
+}
+
+.TabVertical.aasNewTabControl > .tabZone
+{
+    width: 26%;
+    padding-top: 14px;
+    background: none;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab
+{
+    float:none;
+    position:relative;
+    text-align: left;
+    width: 220px;
+    margin: 4px 5px 6px;
+    height: 35px;
+    line-height: 35px;
+    background: none no-repeat scroll 0 0 transparent;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:visited,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:link
+{
+    padding: 0;
+    color: #4782A4;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    background: none;
+    margin-left:0;
+    padding-left:8px;
+}    
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab:hover,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:hover 
+{
+    background-color: #4782A4;
+    color:#FFFFFF;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab > span > a
+{
+    color: #FFFFFF;
+    background-color: #4782A4;
+    height: 35px;
+    line-height: 35px;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab
+{
+    background-color: #4782A4;
+    width: 174px;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab
+{
+    background: none no-repeat scroll 0 0 transparent;
+    width: 174px;
+    color: #FFFFFF;
+}    
+
+.TabVertical.aasNewTabControl > .tabZone
+{
+    width: 20%;
+}
+
+.TabVertical.aasNewTabControl > .pageZone 
+{
+    width: 79%;
+}
+
+
+/* Grid */
+
+table.aasGrid > thead > tr > td
+{
+    border: 0;
+    background: none repeat scroll 0 0 #E8E8E8;
+    border-right: 1px solid #C8C8C8;
+    color: Black;
+    font-size: 1em;
+    height: 40px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+table.aasGrid > tbody > tr, table.aasGrid > tbody > tr *
+{
+    background: none repeat scroll 0 0 transparent;
+}
+
+table.aasGrid > tbody > tr
+{
+    border-top: 1px solid #C8C8C8;
+    cursor:pointer;
+}
+
+table.aasGrid > tbody > tr > td
+{
+    border: 0;
+    border-right: 1px solid #C8C8C8;
+}
+
+.PanelZoneTitle
+{
+    padding: 10px;
+    color: White;
+    background-color: #87A7D6;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, rgb(193,209,232)), color-stop(1, rgb(135,167,214)));
+    background-image: -moz-linear-gradient(center top, rgb(193,209,232) 50%, rgb(135,167,214) 100%);
+    height: 20px;
+}
+
+.GridBorder
+{
+    border: 1px solid #215DA8;
+}
+
+.FondGraphe {
+    background: url("Images/FondGraphe.jpg") repeat-x scroll center bottom #FBFEFF;
+    border: 1px solid #BBA5C3;
+    color: #404040;
+    margin: 0 0 10px;
+    min-height: 107px;
+    padding: 10px 5px 10px 20px;
+}
+
+.gcPrénom,
+.gcNom
+{
+    width: 100px;
+}
+
+.gcTitre
+{
+    width: 300px;
+}
+
+.gcDateNaissance
+{
+    width: 150px;
+}
+
+.ImageLogo > img {
+    height: 95px;
+}
+
+.NoError.InLineOnError
+{
+    display: none;
+}
+
+.Error.InLineOnError
+{
+    display: inline;
+    color:Red;
+}
+
+#ControlLogo .AspectizeImage > img
+{
+    height: 86px;
+}
+
+.gcName,
+.gcDescription
+{
+    width: 200px;
+}
+
+.gcSize
+{
+    width: 50px;
+}
+
+.gcCategory
+{
+    width: 100px;
+}
+
+table#HumanResourcesEmployee-GridEmployees tbody 
+{
+    max-height: 200px;
+    overflow: auto;
+}
+
+

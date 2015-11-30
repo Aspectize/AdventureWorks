@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="SalesPerson">
+        <div class="PaddingSmall">
+        <div class="FloatLeft" style="width:18%">
+            <div class="GridBorder">
+                <div aas-name="GridSalesPerson" aas-type="AspectizeGrid"></div>
+            </div>
+        </div>
+        <div class="FloatLeft" style="width:80%;padding-left: 10px;">
+            <div aas-name="ZoneGraph" aas-type="Panel"></div>
+        </div>
+        <div class="FloatClear"></div>
+        </div>
+    </div>
+
+    <div aas:control="SalesGraph">
+        <div class="FondGraphe">
+            <div style="font-size: 1.3em;font-weight: bold;">
+                Historique des ventes de <span>{SalesPerson}</span>
+            </div>
+            <div aas-name="SalesPersonQuotaChart" aas-type="Dhtmlx.DhtmlxLineChart"></div>  
+        </div>
+    </div>
+
+    <div aas:control="TestRepeater">
+        <div aas-name="RepeaterPanel" aas-type="AspectizeRepeaterPanel"></div>
+    </div>
+
+    <div aas:control="Element">
+        <div><span>{Test}</span></div>
+    </div>
+</body>
+</html>
