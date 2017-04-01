@@ -198,3 +198,4 @@ FakesAssemblies/
 #Aspectize Service configuration
 */Configuration/Services.js
 
+/AdventureWorks/Scripts/_references.js

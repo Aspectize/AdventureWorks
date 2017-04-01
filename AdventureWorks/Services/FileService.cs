@@ -16,8 +16,6 @@ namespace AdventureWorks
     {
         byte[] GetLogo(Guid logoId);
         Guid UploadLogoFile(Stream data, Dictionary<string, object> info);
-        void InitTimerService();
-        void ResetDataBase();
     }
 
     [Service(Name = "AdminService")]
@@ -39,53 +37,6 @@ namespace AdventureWorks
             fileService.Write("Logo", data);
 
             return Guid.NewGuid();
-        }
-
-
-        void IAdminService.InitTimerService()
-        {
-            var schedule0 = ScheduleCommand.RunEvery(1, PeriodUnit.Day, "AdventureWorks/AdminService.ResetData", null, new DateTime(DateTime.Today.AddHours(2).Ticks, DateTimeKind.Utc), null);
-
-        }
-
-        void IAdminService.ResetDataBase()
-        {
-            IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWDemoFileService);
-
-            var dataDemo = fs.Read("DataDemo");
-
-            var ds = DataSetHelper.BinaryLoad(dataDemo);
-
-            IDataManager dm = EntityManager.FromDataBaseService(ServiceName.ADWDB);
-
-            var relations = new List<IRoleRelationQuery>();
-
-            relations.Add(new RoleRelationQuery<Category, CategorySubcategory>());
-            relations.Add(new RoleRelationQuery<Subcategory, ProductSubcategory>());
-            relations.Add(new RoleRelationQuery<Product, ProductProductPhoto>());
-
-            dm.LoadEntitiesGraph<Category>(relations);
-
-            relations = new List<IRoleRelationQuery>();
-
-            relations.Add(new RoleRelationQuery<Employee, EmployeeManager>());
-            relations.Add(new RoleRelationQuery<Employee, EmployeeContact>());
-
-            dm.LoadEntitiesGraph<Employee>(relations);
-
-            relations = new List<IRoleRelationQuery>();
-
-            relations.Add(new RoleRelationQuery<SalesPerson, ContactSalesPerson>());
-            relations.Add(new RoleRelationQuery<SalesPerson, SalesOrderHeaderSalesPerson>());
-            relations.Add(new RoleRelationQuery<SalesOrderHeader, SalesOrderHeaderSalesReason>());
-
-            dm.LoadEntitiesGraphFields<SalesPerson>(EntityLoadOption.AllFields, relations);
-
-            dm.LoadEntities<SalesReason>();
-
-            DataSetHelperEx.Merge(ds, dm.Data);
-
-            dm.SaveTransactional();
         }
 
     }

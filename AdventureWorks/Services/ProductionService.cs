@@ -16,7 +16,6 @@ namespace AdventureWorks
         DataSet LoadSubcategories (int categoryID);
         DataSet LoadProducts(int subcategoryID);
         Byte[] LoadImage(int productId);
-        void TestHistory(int productId);
     }
 
     [Service(Name = "ProductionService")]
@@ -91,19 +90,7 @@ namespace AdventureWorks
             return new Byte[0];
         }
 
-        void IProductionService.TestHistory(int productId)
-        {
-            IDataManager dataManager = EntityManager.FromDataBaseService(ServiceName.ADWDB);
-
-            IEntityManager em = dataManager as IEntityManager;
-
-            dataManager.LoadHistoryInfoEntities<Product>();
-
-            foreach (HistoryInfo hst in em.GetAllInstances<HistoryInfo>())
-            {
-                Product oldProduct = em.GetInstanceFromHistory<Product>(hst);
-            }
-        }
+        
 
         #endregion
     }
