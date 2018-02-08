@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using Aspectize.Core;
+using Aspectize.Core.SEO;
 
 namespace AdventureWorks.Services
 {
     [Service(Name = "Sitemap")]
     public class Sitemap : Aspectize.Core.SEO.ISitemapProvider
     {
+        string ISitemapProvider.GetDefaultHtml()
+        {
+            throw new NotImplementedException();
+        }
+
         List<string> Aspectize.Core.SEO.ISitemapProvider.GetURLs()
         {
             var urls = new List<string>();
